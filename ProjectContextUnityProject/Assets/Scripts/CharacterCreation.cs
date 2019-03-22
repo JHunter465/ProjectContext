@@ -11,6 +11,7 @@ public class CharacterCreation : MonoBehaviour
 
     [SerializeField] TMP_InputField nameTextField;
     [SerializeField] TMP_Dropdown colorOptions;
+    [SerializeField] GameObject authenticationOverlay;
 
     public void SetPlayerSettings()
     {
@@ -33,5 +34,11 @@ public class CharacterCreation : MonoBehaviour
         Debug.Log("name: " + playerName);
         Debug.Log("Color: " + playerColor);
 
+        StartAuthentication();
+    }
+
+    public void StartAuthentication()
+    {
+        authenticationOverlay.SetActive(true);
     }
 }
